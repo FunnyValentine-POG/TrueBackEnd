@@ -1,0 +1,47 @@
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #dbe0e4a2;
+}
+
+.FormDangKy {
+  top: 0;
+  left: 0;
+  overflow: auto;
+  transition: 1s;
+}
+
+.FormDangKy-content {
+  width: 80%;
+  margin: auto 10% auto 10%;
+}
+
+.FormDangKy-content label {
+  color: black;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.RegisterButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}

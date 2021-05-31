@@ -1,2 +1,0 @@
-# TrueBackEnd
-Web Bán Hàng
