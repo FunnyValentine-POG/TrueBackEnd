@@ -4,18 +4,18 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 564px;
+  min-height: 381px;
 }
 
 .u-section-1 .u-layout-wrap-1 {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .u-section-1 .u-image-1 {
-  min-height: 532px;
+  min-height: 390px;
   background-image: url("images/-Tensai-tachi-no-Renai-Zunousen-21.jpg");
-  background-position: 50% 50%;
+  background-position: 50% 0%;
 }
 
 .u-section-1 .u-container-layout-1 {
@@ -25,13 +25,13 @@
 .u-section-1 .u-icon-1 {
   height: 84px;
   width: 84px;
-  color: rgb(235, 186, 22) !important;
   background-image: none;
+  color: rgb(235, 186, 22) !important;
   margin: 0 auto;
 }
 
 .u-section-1 .u-layout-cell-2 {
-  min-height: 273px;
+  min-height: 288px;
 }
 
 .u-section-1 .u-container-layout-2 {
@@ -49,7 +49,7 @@
 }
 
 .u-section-1 .u-layout-cell-3 {
-  min-height: 257px;
+  min-height: 102px;
 }
 
 .u-section-1 .u-container-layout-3 {
@@ -62,15 +62,15 @@
   }
 
   .u-section-1 .u-image-1 {
-    min-height: 439px;
+    min-height: 322px;
   }
 
   .u-section-1 .u-layout-cell-2 {
-    min-height: 225px;
+    min-height: 237px;
   }
 
   .u-section-1 .u-layout-cell-3 {
-    min-height: 212px;
+    min-height: 84px;
   }
 }
 
@@ -126,6 +126,10 @@
     padding-right: 10px;
   }
 
+  .u-section-1 .u-layout-cell-3 {
+    min-height: 73px;
+  }
+
   .u-section-1 .u-container-layout-3 {
     padding-left: 10px;
     padding-right: 10px;
@@ -140,18 +144,22 @@
   .u-section-1 .u-image-1 {
     min-height: 315px;
   }
+
+  .u-section-1 .u-layout-cell-3 {
+    min-height: 100px;
+  }
 }.u-section-2 {
   background-image: none;
 }
 
 .u-section-2 .u-sheet-1 {
-  min-height: 600px;
+  min-height: 617px;
 }
 
 .u-section-2 .u-video-1 {
-  height: 307px;
-  width: 700px;
-  margin: 50px auto 60px 0;
+  height: 347px;
+  width: 730px;
+  margin: 20px auto 77px 0;
 }
 
 .u-section-2 .embed-responsive-1 {
@@ -165,6 +173,7 @@
 
   .u-section-2 .u-video-1 {
     height: 404px;
+    width: 720px;
   }
 }
 
