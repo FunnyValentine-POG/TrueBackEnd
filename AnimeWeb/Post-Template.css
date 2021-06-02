@@ -73,3 +73,70 @@
     min-height: 656px;
   }
 }
+.div_column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.div_border_right{
+  border-right: solid 5px white;
+}
+.div_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.div_info{
+  padding-left: 20px;
+}
+.div_info_name{
+  text-align: center;
+  background-color: green;
+}
+.div_noidung{
+  padding-left: 20px;
+}
+.div_trailer{
+  padding-top: 20px;
+}
+.p_name{
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+.img_banner{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.img_avatar{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  border: 1px white solid;
+}
+.li_info{
+  padding-top: 5px;
+  color: lightseagreen;
+  font-weight: bold;
+}
+.div_button{  
+  text-align: center;
+}
+.button_xem {
+  background-color: #4CAF50; 
+  color: black; 
+  font-size: 24px;
+  border: 2px solid white;
+}
+.h3_noidung{
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+.button_xem:hover {
+  background-color: white;
+  color: 4CAF50;
+}
