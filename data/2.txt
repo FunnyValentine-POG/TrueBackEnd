@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("60b8e93e1d4840110cdf0857"),
+    "ending" : "",
+    "opening" : "\"Endeavor (エンデヴァー)\" by Dragon Ash",
+    "noidung" : "Nguyên tác của phim lấy bối cảnh ở thời kỳ đỉnh cao của Đế chế La Mã và theo chân Cestvs, một cậu bé bị bắt làm nô lệ và được đưa vào trường đào tạo các võ sĩ để chiến đấu ở Đấu trường La Mã.",
+    "namphatsong" : "Q2 2021",
+    "sotap2" : 11,
+    "sotap1" : 8,
+    "sanxuat" : "Bandai Namco Pictures",
+    "filmtag" : "Hành Động, Drama, Lịch sử, Seinen",
+    "filmname" : "CESTVS: THE ROMAN FIGHTER",
+    "smalllink" : "https://photos.animetvn.tv/upload/film/113379.jpg",
+    "biglink" : "https://photos.animetvn.tv/upload/film_big/lve61jh.png",
+    "__v" : 0
+}

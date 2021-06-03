@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("60b8eaa81d4840110cdf085a"),
+    "ending" : "",
+    "opening" : "",
+    "noidung" : "Mùa thứ 2 của anime Megalo Box",
+    "namphatsong" : "Q2 2021",
+    "sotap2" : 13,
+    "sotap1" : 9,
+    "sanxuat" : "TMS Entertainment",
+    "filmtag" : "Hành Động, Đời thường, Drama, Thể thao, Viễn Tưởng",
+    "filmname" : "Nomad: Megalo Box 2",
+    "smalllink" : "https://photos.animetvn.tv/upload/film/113352.jpg",
+    "biglink" : "https://photos.animetvn.tv/upload/film/LfsicKi.png",
+    "__v" : 0
+}

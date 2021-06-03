@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("60b8d117b97d38157097c7ef"),
+    "ending" : "\"time\" by SawanoHiroyuki[nZk]:ReoNa",
+    "opening" : "\"Hikari Are (光あれ)\" by Akihito Okano (岡野昭仁) (from Porno Graffiti)",
+    "noidung" : "Mùa thứ 4 của series anime Nanatsu no Taizai",
+    "namphatsong" : "Q1 2021",
+    "sotap2" : 24,
+    "sotap1" : 21,
+    "sanxuat" : "Studio Deen",
+    "filmtag" : "Hành Động, Phiêu Lưu, Giả Tưởng, Phép thuật, Siêu Nhiên, Shounen",
+    "filmname" : "Nanatsu no Taizai: Fundo no Shinpan (Ss4)",
+    "smalllink" : "https://photos.animetvn.tv/upload/film/110185.jpg",
+    "biglink" : "https://photos.animetvn.tv/upload/film_big/dIQRZr5.png",
+    "__v" : 0
+}

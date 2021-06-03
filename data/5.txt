@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("60b8eae91d4840110cdf085b"),
+    "ending" : "\"Senryakuteki de Yosoku Funou na Love Comedy no Ending Kyoku (戦略的で予測不能なラブコメディのエンディング曲)\" by Kuroha Shida (Inori Minase) & Shirokusa Kachi (Ayane Sakura)",
+    "opening" : "\"Chance! & Revenge!\" by Riko Azuna",
+    "noidung" : "Một bộ phim hài lãng mạn tuổi teen xoay quanh Sueharu Maru, một nam sinh cao trung 17 tuổi chưa bao giờ có bạn gái và “trận chiến của các nữ anh hùng” giữa crush đầu tiên vô cùng đẹp đẽ Shirokusa Kachi và cô bạn thời thơ ấu Kuroha Shida.",
+    "namphatsong" : "Q2 2021",
+    "sotap2" : 12,
+    "sotap1" : 8,
+    "sanxuat" : "Doga Kobo",
+    "filmtag" : "Học Đường, Hài hước, Harem, Tình Yêu",
+    "filmname" : "Osananajimi ga Zettai ni Makenai Love Comedy",
+    "smalllink" : "https://photos.animetvn.tv/upload/film/113327.jpg",
+    "biglink" : "https://photos.animetvn.tv/upload/film/Osananajimi.ga_.Zettai.ni_.Makenai.Love_.Comedy.full_.2845621.jpg",
+    "__v" : 0
+}

@@ -1,0 +1,15 @@
+{
+    "_id" : ObjectId("60b8ea4d1d4840110cdf0859"),
+    "ending" : "\"Chikyuu Marugoto Hug shitainda (地球まるごとハグしたいんだ)\" by Italy (Daisuke Namikawa)",
+    "opening" : "",
+    "noidung" : "Để giải quyết những vấn đề chung của toàn thế giới, \"Hội nghị thế giới\" với sự tham gia của rất nhiều đất nước đã được tổ chức. Trong bối cảnh đó, Ý lại đến muộn như thường lệ... Và thế là câu chuyện hài của chúng ta lại được tiếp tục với những thành viên quen thuộc.",
+    "namphatsong" : "Q2 2021",
+    "sotap2" : 12,
+    "sotap1" : 10,
+    "sanxuat" : "Studio Deen",
+    "filmtag" : "Hài hước, Lịch sử, Parody",
+    "filmname" : "Hetalia World★Stars",
+    "smalllink" : "https://photos.animetvn.tv/upload/film/109913.jpg",
+    "biglink" : "https://photos.animetvn.tv/upload/film_big/PIdLo3M.png",
+    "__v" : 0
+}
