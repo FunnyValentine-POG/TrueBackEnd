@@ -1,0 +1,142 @@
+.u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 835px;
+}
+
+.u-section-1 .u-post-details-1 {
+  min-height: 375px;
+  margin-top: 60px;
+  margin-bottom: -10px;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-1 .u-image-1 {
+  height: 486px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.u-section-1 .u-text-1 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.u-section-1 .u-metadata-1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin-bottom: 0;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-image-1 {
+    margin-left: initial;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 782px;
+  }
+
+  .u-section-1 .u-post-details-1 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 722px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 656px;
+  }
+}
+.div_column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.div_border_right{
+  border-right: solid 5px white;
+}
+.div_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.div_info{
+  padding-left: 20px;
+}
+.div_info_name{
+  text-align: center;
+  background-color: green;
+}
+.div_noidung{
+  padding-left: 20px;
+}
+.div_trailer{
+  padding-top: 20px;
+}
+.p_name{
+  color: green;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+.img_banner{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.img_avatar{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  border: 1px white solid;
+}
+.li_info{
+  padding-top: 5px;
+  color: lightseagreen;
+  font-weight: bold;
+}
+.div_button{  
+  text-align: center;
+}
+.button_xem {
+  background-color: #4CAF50; 
+  color: black; 
+  font-size: 24px;
+  border: 2px solid white;
+}
+.h3_noidung{
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+.button_xem:hover {
+  background-color: white;
+  color: 4CAF50;
+}

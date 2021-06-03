@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Giới thiệu</title>
+<link rel="stylesheet" href="../setting/File_css/Dang_ky.css">
+</head>
+<body>
+    <h2>Modal Signup Form</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+    <div id="id01" class="modal_dk text_dk">
+        
+      <form class="modal-content_dk" action="/action_page.php">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close_dk" title="Close Modal">&times;</span>
+          <div align="center">
+              <img src="../img/logo-akira-education.png" width="100px" alt="Logo Akira" style="float: left"><br>
+              <h1 id="h1_00"> Đăng ký tài khoản</h1>
+              <p id="p_01">Akira, こんにちは 。。。！</p>
+              <p>Xin chào thành viên mới !</p>
+              <p>Mời bạn cung cấp thông tin theo mẫu dưới đây.</p>
+          </div>
+    <div class="container_dk">
+        <label for="HoTen"><b>Họ và tên:</b></label>
+        <input type="text" placeholder="Họ và tên" name="HoTen" required>
+        
+        <label for="GioiTinh"><b>Giới tính:</b></label>
+        <p style="padding-left: 200px;">
+        <input id="gt_01" name="GioiTinh" type="radio" required /> Nam &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="gt_02" name="GioiTinh" type="radio" required /> Nữ 
+        </p>
+        <label for="std"><b>Số điện thoại:</b></label>
+        <input type="text" placeholder="Số điện thoại" name="std" required>
+        
+        <label for="NgheNghiep"><b>Nghề nghiệp:</b></label>
+        <input type="text" placeholder="Nghề nghiệp" name="NgheNghiep" required>
+        
+        <label for="user"><b>Tên đăng nhập:</b></label>
+        <input type="text" placeholder="Tên đăng nhập" name="user" required>
+        
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
+
+      <div class="clearfix_dk">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn_dk text_dk">Cancel</button>
+        <button type="submit" class="signupbtn_dk text_dk">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

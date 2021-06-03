@@ -1,0 +1,53 @@
+<% layout ('layout') %>
+
+    <div class="content parent-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h1 class="main_page_title">Cập nhật mật khẩu mới</h1>
+                    <div class="reset-pass-form bgfff">
+
+                        <% if(hasError) { %>
+                            <% for (var i = 0; i < messages.length; i ++) { %>
+                                <div class='alert alert-danger'>
+                                    <a href="#" class='close' data-dismiss='alert' aria-label="close">
+                                    &#x2718;
+                                </a>
+                                    <%= messages[i] %>
+                                </div>
+                                <%} %>
+                                    <% } %>
+
+                                        <% if(noError) { %>
+                                            <div class='alert alert-info'>
+                                                <a href="#" class='close' data-dismiss='alert' aria-label="close">
+                                                &#x2718;
+                                            </a>
+                                                <%= success %>
+                                            </div>
+                                            <% } %>
+
+                                                <form method="POST">
+                                                    <input type="hidden" name="_token" value="WRRcoejwQgFk4DsmNvOgvL4W6hNxINAo22EvydHw">
+                                                    <input type="hidden" name="token" value="ca485fd7d38de28f23f35709a7eab80977b65c1f0914ce8b07a538cf1c2e002d">
+                                                    <div class="form-group">
+                                                        <label for="password">Password</label>
+                                                        <input id="password" type="password" name="password" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="password_confirmation">Confirm Password</label>
+                                                        <input id="password_confirmation" type="password" name="cpassword" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary">
+                        Reset Password
+                    </button>
+                                                    </div>
+                                                </form>
+                    </div>
+                </div>
+                <!-- /.col-xs-12 col-sm-12 col-md-12 -->
+            </div>
+        </div>
+    </div>

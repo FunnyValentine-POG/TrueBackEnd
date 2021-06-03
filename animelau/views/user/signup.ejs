@@ -1,0 +1,757 @@
+<% layout('layout') %>
+
+    <div class="content parent-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="bgfff login-form-wrap">
+                        <h1 class="main_page_title">Đăng Ký</h1>
+
+                        <% if(hasError) { %>
+                            <% for (var i = 0; i <messages.length; i ++) { %>
+                                <div class='alert alert-danger'>
+                                    <a href="#" class='close' data-dismiss='alert' aria-label="close">
+                                        &#x2718;
+                                    </a>
+                                    <%= messages[i] %>
+                                </div>
+                                <%} %>
+                                    <% } %>
+
+                                        <form method="POST" action="/signup" accept-charset="UTF-8"><input name="_token" type="hidden" value="nIJdVC98P33OGVGFeKfTk8jQ7gSGGp55j4hxQDhZ">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <a href="/auth/facbook" title="Đăng nhập bằng Facebook"><img width="250" src="https://animetvn.com/images/fb.png" alt="facebook"></a>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="email">Email</label>
+                                                        <input class="form-control" name="email" type="email" value="" id="email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="password">Mật khẩu</label>
+                                                        <input class="form-control" name="password" type="password" value="" id="password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="repassword">Xác nhận mật khẩu</label>
+                                                        <input class="form-control" name="repassword" type="password" value="" id="repassword">
+                                                    </div>
+
+                                                    <span class="glyphicon glyphicon-ok text-success"></span> Có tủ phim riêng <br><br>
+                                                    <span class="glyphicon glyphicon-ok text-success"></span> Quản lý phim theo ý muốn <br><br>
+                                                    <span class="glyphicon glyphicon-ok text-success"></span> Nhận thông báo khi có tập mới <br> <br>
+                                                    <span class="glyphicon glyphicon-ok text-success"></span> Chia sẽ tủ phim của mình cho bạn bè <br><br>
+                                                    <span class="glyphicon glyphicon-ok text-success"></span> Và nhiều tính năng hấp dẫn khác nữa...
+
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-6">
+
+                                                    <div class="form-group">
+                                                        <a href="/auth/google" title="Đăng nhập bằng Google"><img width="250" src="https://animetvn.com/images/gg.png" alt="google"></a>
+                                                    </div>
+                                                    <!-- <div class="form-group">
+                                        <label for="captcha">Xác thực (Vui lòng check vào nút "Tôi không phải là người máy")</label>
+                                        <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+                                        <div class="g-recaptcha" data-sitekey="6LcPihkUAAAAAGeyJMt1iLjGuuCMyr4b0lt27qZb">
+                                            <div style="width: 304px; height: 78px;">
+                                                <div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcPihkUAAAAAGeyJMt1iLjGuuCMyr4b0lt27qZb&amp;co=aHR0cHM6Ly9hbmltZXR2bi5jb206NDQz&amp;hl=en&amp;v=lz3oilnU_FqeO0ydN3CXU9RT&amp;size=normal&amp;cb=pqf50k2criw4"
+                                                        width="304" height="78" role="presentation" name="a-wzntjd2acy2x" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div>
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                            </div><iframe style="display: none;"></iframe></div>
+                                    </div> <br> -->
+                                                    <div class="form-group">
+                                                        <label style="font-size: 12px;"><input type="checkbox" id="agree" value="1" name="agree" checked="checked"> Tôi đồng ý với các qui định của website</label>
+                                                    </div> <br>
+                                                    <div class="form-group">
+                                                        <input class="btn btn-primary" type="submit" value="Đăng ký">
+                                                    </div>
+
+
+                                                </div>
+
+
+
+                                            </div>
+                                        </form>
+                    </div>
+                </div>
+                <!-- /.col-xs-12 col-sm-12 col-md-8 -->
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="widget wranks">
+                        <h3>Bảng xếp hạng</h3>
+                        <div class="tabs_wrank">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#wrank-day" aria-controls="wrank-day" role="tab" data-toggle="tab">Ngày</a></li>
+                                <li role="presentation"><a href="#wrank-week" aria-controls="wrank-week" role="tab" data-toggle="tab">Tuần</a></li>
+                                <li role="presentation"><a href="#wrank-month" aria-controls="wrank-month" role="tab" data-toggle="tab">Tháng</a></li>
+                                <li role="presentation"><a href="#wrank-q" aria-controls="wrank-q" role="tab" data-toggle="tab">Mùa</a></li>
+                                <li role="presentation"><a href="#wrank-year" aria-controls="wrank-year" role="tab" data-toggle="tab">Năm</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="wrank-day">
+                                    <ul class="rank-film-list">
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f2104-naruto-shippuuden.html">
+                                                <div class="r_c_wrap"><span class="r_c">1</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/5rHPGDc-1.jpg" alt="Naruto Shippuuden - Naruto: Sức Mạnh Vĩ Thú | Naruto Phần 2">
+                                                <h3 class="title">Naruto Shippuuden</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">500/500 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 8,167</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f2105-one-piece.html">
+                                                <div class="r_c_wrap"><span class="r_c">2</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/e7c936b5eacd4fd0f89bd7b651954e6b1383245216_full.jpg" alt="One Piece - Đảo Hải Tặc | Vua Hải Tặc">
+                                                <h3 class="title">One Piece</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">976/??? Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 4,205</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f4756-boruto-naruto-next-generations.html">
+                                                <div class="r_c_wrap"><span class="r_c">3</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/84460.jpg" alt="Boruto: Naruto Next Generations - BORUTO -NARUTO NEXT GENERATIONS ( Naruto Season 3) | Boruto: Naruto những thế hệ kế tiếp">
+                                                <h3 class="title">Boruto: Naruto Next Generations</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">201/?? Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 2,222</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f3484-detective-conan.html">
+                                                <div class="r_c_wrap"><span class="r_c">4</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/Pb8f2SL-2.jpg" alt="Detective Conan - Thám Tử Lừng Danh Conan | Meitantei Conan | 名探偵コナン">
+                                                <h3 class="title">Detective Conan</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">1005/??? Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 2,020</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f5138-black-clover-tv.html">
+                                                <div class="r_c_wrap"><span class="r_c">5</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/ac36818309ca8e2c144095f00bd314509d9601f7.jpg" alt="Black Clover (TV) - Black Clover (2017)">
+                                                <h3 class="title">Black Clover (TV)</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">170/170 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 1,695</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f5984-jujutsu-kaisen.html">
+                                                <div class="r_c_wrap"><span class="r_c">6</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/109222.jpg" alt="Jujutsu Kaisen - Sorcery Fight">
+                                                <h3 class="title">Jujutsu Kaisen</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">24/24 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 1,380</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f3846-dragon-ball-chou.html">
+                                                <div class="r_c_wrap"><span class="r_c">7</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/fdPVK3L.jpg" alt="Dragon Ball Super - Dragon Ball Chou">
+                                                <h3 class="title">Dragon Ball Super</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">131/131 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 1,250</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f1427-bleach.html">
+                                                <div class="r_c_wrap"><span class="r_c">8</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/yLkcS5M.jpg" alt="Bleach - Sứ Mạng Thần Chết Ichigo">
+                                                <h3 class="title">Bleach</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">366/366 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 1,182</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f1735-kuroko-no-basket.html">
+                                                <div class="r_c_wrap"><span class="r_c">9</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/2kWGYzq.jpg" alt="Kuroko No Basket - Kuroko's Basketball | Kuroko no Basuke Ss1">
+                                                <h3 class="title">Kuroko No Basket</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">25/25 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 1,024</span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="https://animetvn.com/thong-tin-phim/f3563-naruto-dattebayo.html">
+                                                <div class="r_c_wrap"><span class="r_c">10</span></div>
+                                                <img width="" class="thumb lazyload img-responsive" src="https://photos.animetvn.tv/upload/film/GGd56Lb.jpg" alt="Naruto Dattebayo - Naruto: Ninja Làng Mộc Diệp | Naruto Phần 1 | Naruto 1">
+                                                <h3 class="title">Naruto Dattebayo</h3>
+                                            </a>
+                                            <div>
+                                                <span class="time">220/220 Tập</span>
+                                            </div>
+                                            <div>
+                                                <span class="viewed"><span>Lượt xem:</span> 990</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="wrank-week"></div>
+                                <div role="tabpanel" class="tab-pane" id="wrank-month"></div>
+                                <div role="tabpanel" class="tab-pane" id="wrank-q"></div>
+                                <div role="tabpanel" class="tab-pane" id="wrank-year"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>Bình luận mới</h3>
+                        <ul class="cmt-widget">
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f1096-gosick.html">
+        Gosick
+        </a>
+                                    <span class="cmt-ep">Tập 24_End</span>
+                                </h3>
+                                <a class="author-avatar" title="Gosick" href="https://animetvn.com/thong-tin-phim/f1096-gosick.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/upload/avatar_animetvn_boy.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    antenloman        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 14 phút trước</span>
+                                <div class="cmt-content">
+                                    Phim giúp nở não và giúp cảm nhận được hơi ấm hạnh phúc. Tuyệt phẩm.
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6102-tensei-shitara-slime-datta-ken-2nd-season.html">
+        Tensei shitara Slime Datta Ken 2nd Season
+        </a>
+                                    <span class="cmt-ep">Tập 09</span>
+                                </h3>
+                                <a class="author-avatar" title="Tensei shitara Slime Datta Ken 2nd Season" href="https://animetvn.com/thong-tin-phim/f6102-tensei-shitara-slime-datta-ken-2nd-season.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    ye        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 1 giờ trước</span>
+                                <div class="cmt-content">
+                                    xem nhảm vãil nói lắm dell thấy đánh nhau
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f5984-jujutsu-kaisen.html">
+        Jujutsu Kaisen
+        </a>
+                                    <span class="cmt-ep">Tập 24_End</span>
+                                </h3>
+                                <a class="author-avatar" title="Jujutsu Kaisen" href="https://animetvn.com/thong-tin-phim/f5984-jujutsu-kaisen.html">
+                                    <img alt="Author" class="" src="/upload/avatar/6b00e9284a821864d9e9a23d2ce17e35-mangan-chinese.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Lila        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 3 giờ trước</span>
+                                <div class="cmt-content">
+                                    hay ghê main siêu cấp ngầu, hài, đẹp zai
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f3484-detective-conan.html">
+        Detective Conan
+        </a>
+                                    <span class="cmt-ep">Tập 863</span>
+                                </h3>
+                                <a class="author-avatar" title="Detective Conan" href="https://animetvn.com/thong-tin-phim/f3484-detective-conan.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    LKank        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 4 giờ trước</span>
+                                <div class="cmt-content">
+                                    Đỉnh<img src="https://photos.animetvn.tv/images/Gif/Cute/12.gif" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6188-osananajimi-ga-zettai-ni-makenai-love-comedy.html">
+        Osananajimi ga Zettai ni Makenai Love Comedy
+        </a>
+                                    <span class="cmt-ep">Tập 04</span>
+                                </h3>
+                                <a class="author-avatar" title="Osananajimi ga Zettai ni Makenai Love Comedy" href="https://animetvn.com/thong-tin-phim/f6188-osananajimi-ga-zettai-ni-makenai-love-comedy.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    phe        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 9 giờ trước</span>
+                                <div class="cmt-content">
+                                    thề mấy thằng nhân vật phụ rên rên hài vkl&nbsp;<img src="https://photos.animetvn.tv/images/Gif/Troll/01-kyghe.gif" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f1803-mushishi.html">
+        Mushishi
+        </a>
+                                    <span class="cmt-ep"></span>
+                                </h3>
+                                <a class="author-avatar" title="Mushishi" href="https://animetvn.com/thong-tin-phim/f1803-mushishi.html">
+                                    <img alt="Author" class="" src="/upload/avatar/170px-RWS_Tarot_00_Fool.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    the_fool        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 9 giờ trước</span>
+                                <div class="cmt-content">
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 30
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f3437-fateprototype-ova.html">
+        Fate/Prototype (OVA)
+        </a>
+                                    <span class="cmt-ep">Tập OVA</span>
+                                </h3>
+                                <a class="author-avatar" title="Fate/Prototype (OVA)" href="https://animetvn.com/thong-tin-phim/f3437-fateprototype-ova.html">
+                                    <img alt="Author" class="" src="/upload/avatar/digital-blasphemy-3d-wallpaper-1024x768.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Sailor        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 9 giờ trước</span>
+                                <div class="cmt-content">
+                                    giống 1 bản thảo, bản nháp đầu của tác giả chưa hoàn thiện&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f5234-sword-art-online-alternative-gun-gale-online.html">
+        Sword Art Online Alternative: Gun Gale Online
+        </a>
+                                    <span class="cmt-ep"></span>
+                                </h3>
+                                <a class="author-avatar" title="Sword Art Online Alternative: Gun Gale Online" href="https://animetvn.com/thong-tin-phim/f5234-sword-art-online-alternative-gun-gale-online.html">
+                                    <img alt="Author" class="" src="/upload/avatar/Ultra-Instinct-6.gif" style="display: inline;">
+                                </a>
+                                <span class="author">
+    theolddragon        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 9 giờ trước</span>
+                                <div class="cmt-content">
+                                    Cốt truyện của cái này khá gần với Fatal Bullet mà k có thằng Tồ cũng đc y trong game ;))&nbsp;<img src="https://photos.animetvn.tv/images/Gif/Emoji/a-winking-face_1f609.png" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6213-godzilla-sp.html">
+        Godzilla: S.P
+        </a>
+                                    <span class="cmt-ep">Tập 10</span>
+                                </h3>
+                                <a class="author-avatar" title="Godzilla: S.P" href="https://animetvn.com/thong-tin-phim/f6213-godzilla-sp.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Ngọc hân        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 11 giờ trước</span>
+                                <div class="cmt-content">
+                                    Xem sever nào k lag nhỉ ;-;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f5869-kakushigoto-tv.html">
+        Kakushigoto (TV)
+        </a>
+                                    <span class="cmt-ep">Tập 12_End</span>
+                                </h3>
+                                <a class="author-avatar" title="Kakushigoto (TV)" href="https://animetvn.com/thong-tin-phim/f5869-kakushigoto-tv.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    JADENYUKI         </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 11 giờ trước</span>
+                                <div class="cmt-content">
+                                    Siêu phẩm, hay thật sự<img src="https://photos.animetvn.tv/images/Gif/Pikalong/d4311aebb51c52752b76f15051748acc.png" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6030-taisou-zamurai.html">
+        Taisou Zamurai
+        </a>
+                                    <span class="cmt-ep">Tập 11_End</span>
+                                </h3>
+                                <a class="author-avatar" title="Taisou Zamurai" href="https://animetvn.com/thong-tin-phim/f6030-taisou-zamurai.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    thao1111        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 11 giờ trước</span>
+                                <div class="cmt-content">
+                                    phim hay ơi là hay, không uổng một ngày tu luyện!!! những giây phút quý giá không lãng phí rồi!!! Rất.. rất...rất cảm động a!!!
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f5718-mairimashita-iruma-kun.html">
+        Mairimashita! Iruma-kun
+        </a>
+                                    <span class="cmt-ep">Tập 11</span>
+                                </h3>
+                                <a class="author-avatar" title="Mairimashita! Iruma-kun" href="https://animetvn.com/thong-tin-phim/f5718-mairimashita-iruma-kun.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    zh        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 11 giờ trước</span>
+                                <div class="cmt-content">
+                                    coi tập 11 mah cừi mún điên
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f4245-kono-subarashii-sekai-ni-shukufuku-wo.html">
+        Kono Subarashii Sekai ni Shukufuku wo!
+        </a>
+                                    <span class="cmt-ep"></span>
+                                </h3>
+                                <a class="author-avatar" title="Kono Subarashii Sekai ni Shukufuku wo!" href="https://animetvn.com/thong-tin-phim/f4245-kono-subarashii-sekai-ni-shukufuku-wo.html">
+                                    <img alt="Author" class="" src="/upload/avatar/FB_IMG_1621768845642.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    SkyTuanDat        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 11 giờ trước</span>
+                                <div class="cmt-content">
+                                    Bộ này có ss3 ko ae
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6242-the-gioi-hoan-my.html">
+        Thế Giới Hoàn Mỹ
+        </a>
+                                    <span class="cmt-ep">Tập 01</span>
+                                </h3>
+                                <a class="author-avatar" title="Thế Giới Hoàn Mỹ" href="https://animetvn.com/thong-tin-phim/f6242-the-gioi-hoan-my.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    0707        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 11 giờ trước</span>
+                                <div class="cmt-content">
+                                    rồi cái sẹo hải tặc luffy trc ngực của tiểu bất điểm đâu&nbsp;<img src="https://photos.animetvn.tv/images/Gif/Popo/0431e956dccb7da8a6948208fd987353.png" width="60" height="60" alt=""> &nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6208-vivy-fluorite-eye39s-song.html">
+        Vivy: Fluorite Eye&amp;#39s Song
+        </a>
+                                    <span class="cmt-ep">Tập 10</span>
+                                </h3>
+                                <a class="author-avatar" title="Vivy: Fluorite Eye&amp;#39s Song" href="https://animetvn.com/thong-tin-phim/f6208-vivy-fluorite-eye39s-song.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    vohox        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    đm đoạn cuối nghe nổi hết mẹ da gà :v &nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6195-kyuukyoku-shinka-shita-full-dive-rpg-ga-genjitsu-yori-mo-kusoge-dattara.html">
+        Kyuukyoku Shinka shita Full Dive RPG ga Genjitsu yori mo Kusoge Dattara
+        </a>
+                                    <span class="cmt-ep">Tập 08</span>
+                                </h3>
+                                <a class="author-avatar" title="Kyuukyoku Shinka shita Full Dive RPG ga Genjitsu yori mo Kusoge Dattara" href="https://animetvn.com/thong-tin-phim/f6195-kyuukyoku-shinka-shita-full-dive-rpg-ga-genjitsu-yori-mo-kusoge-dattara.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    dabi         </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    tap 9 dauuuuuuuuuuuu&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6287-jahy-sama-wa-kujikenai.html">
+        Jahy-sama wa Kujikenai!
+        </a>
+                                    <span class="cmt-ep">Tập Preview</span>
+                                </h3>
+                                <a class="author-avatar" title="Jahy-sama wa Kujikenai!" href="https://animetvn.com/thong-tin-phim/f6287-jahy-sama-wa-kujikenai.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    tranletran        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    Có clip gốc không ? &nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6180-sentouin-hakenshimasu.html">
+        Sentouin, Hakenshimasu!
+        </a>
+                                    <span class="cmt-ep">Tập 01</span>
+                                </h3>
+                                <a class="author-avatar" title="Sentouin, Hakenshimasu!" href="https://animetvn.com/thong-tin-phim/f6180-sentouin-hakenshimasu.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    I'm Gay        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    <img src="https://photos.animetvn.tv/images/Gif/Troll/07-ahaha.gif" width="60" height="60" alt="">phim cảm động ghê =))&nbsp; Coi mà cười rớt nước mắt&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6117-mushoku-tensei-isekai-ittara-honki-dasu.html">
+        Mushoku Tensei: Isekai Ittara Honki Dasu
+        </a>
+                                    <span class="cmt-ep">Tập 05</span>
+                                </h3>
+                                <a class="author-avatar" title="Mushoku Tensei: Isekai Ittara Honki Dasu" href="https://animetvn.com/thong-tin-phim/f6117-mushoku-tensei-isekai-ittara-honki-dasu.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Nhi Ú        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    tránh dịch coi lại công nhận Art và Animation các skill đỉnh quá&nbsp;
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6213-godzilla-sp.html">
+        Godzilla: S.P
+        </a>
+                                    <span class="cmt-ep">Tập 10</span>
+                                </h3>
+                                <a class="author-avatar" title="Godzilla: S.P" href="https://animetvn.com/thong-tin-phim/f6213-godzilla-sp.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Muda Muda Muda Wryyyyy        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    So con này với Shin Godzilla không biết con nào ăn&nbsp;<img src="https://photos.animetvn.tv/images/Gif/Onion/015.gif" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f5347-grand-blue.html">
+        Grand Blue
+        </a>
+                                    <span class="cmt-ep">Tập 12_End</span>
+                                </h3>
+                                <a class="author-avatar" title="Grand Blue" href="https://animetvn.com/thong-tin-phim/f5347-grand-blue.html">
+                                    <img alt="Author" class="" src="/upload/avatar/received_748693849069426.jpeg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    longvupro113456        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 12 giờ trước</span>
+                                <div class="cmt-content">
+                                    &nbsp;Theo thông tin tôi được biết thì bộ này sẽ có ss2 và sẽ ra vào tháng 7&nbsp;<img src="https://photos.animetvn.tv/images/Gif/Cute/14.gif" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f2886-haikyuu.html">
+        Haikyuu!!
+        </a>
+                                    <span class="cmt-ep">Tập 06</span>
+                                </h3>
+                                <a class="author-avatar" title="Haikyuu!!" href="https://animetvn.com/thong-tin-phim/f2886-haikyuu.html">
+                                    <img alt="Author" class="" src="/upload/avatar/FB_IMG_1481546476795.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    kumanolife        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    <img src="https://photos.animetvn.tv/images/Gif/Cute/23.gif" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f5626-enen-no-shouboutai.html">
+        Enen no Shouboutai
+        </a>
+                                    <span class="cmt-ep">Tập 03</span>
+                                </h3>
+                                <a class="author-avatar" title="Enen no Shouboutai" href="https://animetvn.com/thong-tin-phim/f5626-enen-no-shouboutai.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    hihi mình là MI giấu tên        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    <img src="https://photos.animetvn.tv/images/Gif/Onion/001.gif" width="60" height="60" alt="">&nbsp;dm art bộ này đẹp vaixiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii, background đỉnh vãi loz<img src="https://photos.animetvn.tv/images/Gif/Troll/01-kyghe.gif"
+                                        width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f2126-girls-und-panzer.html">
+        Girls Und Panzer
+        </a>
+                                    <span class="cmt-ep">Tập 03</span>
+                                </h3>
+                                <a class="author-avatar" title="Girls Und Panzer" href="https://animetvn.com/thong-tin-phim/f2126-girls-und-panzer.html">
+                                    <img alt="Author" class="" src="/upload/avatar/3fdfa2a4263fbd14327dea0bf84caf77.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    GOn nOin        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    cái củ kẹt gì đây tập bị đảo vcl
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6019-higurashi-no-naku-koro-ni-2020.html">
+        Higurashi no Naku Koro ni (2020)
+        </a>
+                                    <span class="cmt-ep">Tập 22</span>
+                                </h3>
+                                <a class="author-avatar" title="Higurashi no Naku Koro ni (2020)" href="https://animetvn.com/thong-tin-phim/f6019-higurashi-no-naku-koro-ni-2020.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    HaruoAkira        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    Sao lại là remake ta? Phần này mới hoàn toàn mà?
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6164-kimetsu-gakuen-valentine-hen.html">
+        Kimetsu Gakuen: Valentine-hen
+        </a>
+                                    <span class="cmt-ep">Tập 01</span>
+                                </h3>
+                                <a class="author-avatar" title="Kimetsu Gakuen: Valentine-hen" href="https://animetvn.com/thong-tin-phim/f6164-kimetsu-gakuen-valentine-hen.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    haduc08        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    bo phec<img src="https://photos.animetvn.tv/images/Gif/Emoji/a-winking-face_1f609.png" width="60" height="60" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f2126-girls-und-panzer.html">
+        Girls Und Panzer
+        </a>
+                                    <span class="cmt-ep">Tập 02</span>
+                                </h3>
+                                <a class="author-avatar" title="Girls Und Panzer" href="https://animetvn.com/thong-tin-phim/f2126-girls-und-panzer.html">
+                                    <img alt="Author" class="" src="/upload/avatar/3fdfa2a4263fbd14327dea0bf84caf77.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    GOn nOin        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    cái cấm hoa nhìn như nổ thùng đạn
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f6208-vivy-fluorite-eye39s-song.html">
+        Vivy: Fluorite Eye&amp;#39s Song
+        </a>
+                                    <span class="cmt-ep">Tập 09</span>
+                                </h3>
+                                <a class="author-avatar" title="Vivy: Fluorite Eye&amp;#39s Song" href="https://animetvn.com/thong-tin-phim/f6208-vivy-fluorite-eye39s-song.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/upload/avatar_animetvn_boy.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    KidNextDoor        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 13 giờ trước</span>
+                                <div class="cmt-content">
+                                    Ủa nghe nói ED song của ep 10 khác với các ep còn lại sao tôi lại thấy nó giống nhau nhỉ?
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f2159-hataraku-maou-sama-bd.html">
+        Hataraku Maou-sama! [BD]
+        </a>
+                                    <span class="cmt-ep">Tập 05</span>
+                                </h3>
+                                <a class="author-avatar" title="Hataraku Maou-sama! [BD]" href="https://animetvn.com/thong-tin-phim/f2159-hataraku-maou-sama-bd.html">
+                                    <img alt="Author" class="" src="https://animetvn.com/images/anonymous.png" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Nà ní        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 14 giờ trước</span>
+                                <div class="cmt-content">
+                                    Lạ nhỉ Lucifer với Satan là 1 mà
+                                </div>
+                            </li>
+                            <li>
+                                <h3 class="title">
+                                    <a class="film-link" href="https://animetvn.com/thong-tin-phim/f4701-akiba39s-trip-the-animation.html">
+        Akiba&amp;#39s Trip The Animation
+        </a>
+                                    <span class="cmt-ep">Tập 03</span>
+                                </h3>
+                                <a class="author-avatar" title="Akiba&amp;#39s Trip The Animation" href="https://animetvn.com/thong-tin-phim/f4701-akiba39s-trip-the-animation.html">
+                                    <img alt="Author" class="" src="/upload/avatar/screen-3.jpg" style="display: inline;">
+                                </a>
+                                <span class="author">
+    Kashizo        </span>
+                                <span class="time"><i class="fa fa-clock-o"></i> 14 giờ trước</span>
+                                <div class="cmt-content">
+                                    art đẹp nhưng hơi nhàm vs lại nd ko sâu lắm&nbsp;<img src="https://photos.animetvn.tv/images/Gif/Ami/25.gif" width="60" height="60" alt=""> &nbsp;
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.col-xs-12 col-sm-12 col-md-4 -->
+            </div>
+        </div>
+    </div>
