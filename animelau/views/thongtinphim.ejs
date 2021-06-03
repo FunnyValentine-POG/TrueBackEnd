@@ -8,13 +8,15 @@
                         <div class="thongbaonew">Hướng dẫn tìm kiếm phim trên trang Web Google:
                             <font color="red">Tên phim + Anime Lậu</font>
                         </div>
-                        <h1 class="h1_main_title2">Cestvs: The Roman Fighter</h1>
+                        <h1 class="h1_main_title2">
+                            <%=film.filmname%>
+                        </h1>
                     </div>
                     <!-- <div class="img_info "> -->
                     <div class="img_info">
-                        <img class="big_img" alt="Xem phim Cestvs: The Roman Fighter - Kentou Ankokuden Cestv, Cestus: The Legend of Boxing in the Dark Ages Vietsub" src="https://photos.animetvn.tv/upload/film_big/lve61jh.png">
+                        <img class="big_img" alt="Xem phim Cestvs: The Roman Fighter - Kentou Ankokuden Cestv, Cestus: The Legend of Boxing in the Dark Ages Vietsub" src="<%= film.biglink%>">
                         <div class="small_img">
-                            <img class="thumb" alt="Xem phim Cestvs: The Roman Fighter - Kentou Ankokuden Cestv, Cestus: The Legend of Boxing in the Dark Ages Vietsub" src="https://photos.animetvn.tv/upload/film/113379.jpg">
+                            <img class="thumb" alt="Xem phim Cestvs: The Roman Fighter - Kentou Ankokuden Cestv, Cestus: The Legend of Boxing in the Dark Ages Vietsub" src="<%= film.smalllink%>">
                         </div>
                     </div>
                 </div>
@@ -29,33 +31,40 @@
                                 <div class="col-md-7 border-left">
                                     <div class="div-more-info">
                                         <div class="name">
-                                            <h2 class="name-vi">Cestvs: The Roman Fighter</h2>
-                                            <h3 class="name-eng">Kentou Ankokuden Cestv, Cestus: The Legend of Boxing in the Dark Ages</h3>
+                                            <h2 class="name-vi">
+                                                <%=film.filmname%>
+                                            </h2>
+                                            <!-- <h3 class="name-eng">Kentou Ankokuden Cestv, Cestus: The Legend of Boxing in the Dark Ages</h3> -->
                                         </div>
                                         <ul class="more-info">
                                             <li class="has-color">
                                                 <i class="fa fa-list"></i><span> Thể loại: </span>
-                                                <a href="" title="Phim Hành Động">Hành Động</a>, <a href="" title="Phim Drama">Drama</a>, <a href=""
-                                                    title="Phim Lịch sử">Lịch sử</a>, <a href="" title="Phim Seinen">Seinen</a>
+                                                <a href="" title="Phim Hành Động">Hành Động</a>, <a href="" title="Phim Drama">Drama</a>, <a href="" title="Phim Lịch sử">Lịch sử</a>, <a href="" title="Phim Seinen">Seinen</a>
                                             </li>
 
                                             <li class="has-color">
                                                 <i class="fa fa-home"></i><span> Nhà sản xuất: </span>
-                                                <a href="" title="Bandai Namco Pictures">Bandai Namco Pictures</a>
+                                                <a href="" title="Bandai Namco Pictures">
+                                                    <%=film.sanxuat%>
+                                                </a>
                                             </li>
 
 
 
-                                            <li class="has-color"><i class="fa fa-refresh"></i><span> Số tập: </span>08/11 Tập</li>
+                                            <li class="has-color"><i class="fa fa-refresh"></i><span> Số tập: </span>
+                                                <%=film.sotap1%>/
+                                                    <%=film.sotap2%> Tập</li>
 
                                             <li class="has-color"><i class="fa fa-eye"></i><span> Lượt xem: </span>4,900 lượt</li>
-                                            <li class="has-color"><i class="fa fa-calendar"></i><span> Năm phát sóng: </span>Q2 2021</li>
-                                            <li class="has-color">
+                                            <li class="has-color"><i class="fa fa-calendar"></i><span> Năm phát sóng: </span>
+                                                <%=film.namphatsong%>
+                                            </li>
+                                            <!-- <li class="has-color">
                                                 <i class="fa fa-heart"></i> <span> Thành viên theo dõi: </span> 37 </li>
                                             <li class="has-color"><i class="fa fa-signal"></i><span> AnimeTVN Rank: </span> Xếp hạng thứ
                                                 <font style="color:#fc0203;font-size:15px;"> 4221 </font>
                                             </li>
-                                            <li class="has-color"><i class="fa fa-comments"></i><span> Bình luận: </span>10 lượt</li>
+                                            <li class="has-color"><i class="fa fa-comments"></i><span> Bình luận: </span>10 lượt</li> -->
                                             <li>
                                                 <div class="film-info-ratings">
                                                     <i class="fa fa-thumbs-up"></i> <span class="count-rating">Đánh giá (<span class="count-rating-num">8 Lượt</span>)</span>
@@ -139,18 +148,18 @@
                                     <div class="btns">
                                         <div style="height: 100px;"></div>
 
-                                        <a title="Xem phim Cestvs: The Roman Fighter tập 01" class="btn play-now" href="">Xem phim</a>
+                                        <a title="Xem phim <%=film.filmname%> tập 01" class="btn play-now" href="">Xem phim</a>
                                         <div class="latest_eps">
                                             Tập mới cập nhật:
-                                            <a href="" title="Xem phim Cestvs: The Roman Fighter Tập 08">Tập 08</a> |
-                                            <a href="" title="Xem phim Cestvs: The Roman Fighter Tập 07">Tập 07</a> |
-                                            <a href="" title="Xem phim Cestvs: The Roman Fighter Tập 06">Tập 06</a> |
-                                            <a href="" title="Xem phim Cestvs: The Roman Fighter Tập 05">Tập 05</a> |
-                                            <a href="" title="Xem phim Cestvs: The Roman Fighter Tập 04">Tập 04</a> |
+                                            <% for (var i = film.sotap1; i > film.sotap1 - 5; i--) { %>
+                                                <a href="" title="Xem phim <%=film.filmname%> Tập <%=i%>">Tập <%=i%></a> |
+                                                <%}%>
                                         </div>
                                         <a href="javascript:void(0);" title="Thêm vào hộp phim yêu thích!" data-id="6222" class="btn addToList ">THÊM VÀO TỦ</a>
 
-                                        <a title="facebook save Cestvs: The Roman Fighter tập 01" class="fb-save fb_iframe_widget" href="" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></a>
+                                        <a title="facebook save Cestvs: The Roman Fighter tập 01" class="fb-save fb_iframe_widget" href="" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe>
+                                            </span>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -173,16 +182,20 @@
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade active in" id="tab-film-content">
                                                 <div class="content">
-                                                    <p>Nguyên tác của phim lấy bối cảnh ở thời kỳ đỉnh cao của Đế chế La Mã và theo chân Cestvs, một cậu bé bị bắt làm nô lệ và được đưa vào trường đào tạo các võ sĩ để chiến đấu ở Đấu trường La Mã.</p>
+                                                    <p>
+                                                        <%=film.noidung%>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="tab-film-music">
                                                 <ul>
                                                     <li class="title">Bài nhạc mở đầu (Opening Theme)</li>
                                                     <li class="content">
-                                                        "Endeavor (エンデヴァー)" by Dragon Ash </li>
+                                                        <%=film.opening%>
+                                                    </li>
                                                     <li class="title">Bài nhạc kết thúc (Ending Theme)</li>
                                                     <li class="content">
+                                                        <%=film.ending%>
                                                     </li>
                                                 </ul>
                                             </div>

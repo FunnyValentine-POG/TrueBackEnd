@@ -261,10 +261,22 @@ module.exports = (app) => {
         });
     });
 
-    app.get('/thongtinphim', (req, res) => {
-        res.render('thongtinphim', {
-            title: 'Thông tin phim',
-            cookie: req.session.cookie
+    // app.get('/thongtinphim', (req, res) => {
+    //     res.render('thongtinphim', {
+    //         title: 'Thông tin phim',
+    //         cookie: req.session.cookie
+    //     });
+    // });
+
+    app.get('/thongtinphim/:filmname', (req, res) => {
+        ListFilm.findOne({
+            filmname: req.params.filmname
+        }, (err, film) => {
+            res.render('thongtinphim', {
+                title: 'Thông tin phim' + film.filmname,
+                cookie: req.session.cookie,
+                film: film
+            });
         });
     });
 
