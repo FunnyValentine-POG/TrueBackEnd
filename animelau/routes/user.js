@@ -102,10 +102,50 @@ module.exports = (app) => {
     app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }));
 
     app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-        successRedirect: '/home',
         failureRedirect: '/login',
         failureFlash: true
-    }));
+    }), (req, res) => {
+        if (req.body.rememberme !== undefined) {
+            req.session.cookie.originalMaxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
+        } else {
+            req.session.cookie.originalMaxAge = 5 * 60 * 1000; // 1 hour
+        }
+        User.findOne({ 'facebook': req.body.facebook }, (err, user) => {
+            if (!user) {
+                req.flash('error', 'No Account With That Facebook Exist or Facebook Is Invalid.');
+                return res.redirect('/login');
+            }
+            if (user.role !== 'admin') {
+                res.redirect('/' + user.role);
+            } else {
+                res.redirect('/adminSite' + user.role);
+            }
+        });
+    });
+
+    app.get('/auth/google', passport.authenticate('google', { scope: 'email' }));
+
+    app.get('/auth/google/callback', passport.authenticate('google', {
+        failureRedirect: '/login',
+        failureFlash: true
+    }), (req, res) => {
+        if (req.body.rememberme !== undefined) {
+            req.session.cookie.originalMaxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
+        } else {
+            req.session.cookie.originalMaxAge = 5 * 60 * 1000; // 1 hour
+        }
+        User.findOne({ 'google': req.body.google }, (err, user) => {
+            if (!user) {
+                req.flash('error', 'No Account With That Google Account Exist or Google Account Is Invalid.');
+                return res.redirect('/login');
+            }
+            if (user.role !== 'admin') {
+                res.redirect('/' + user.role);
+            } else {
+                res.redirect('/adminSite' + user.role);
+            }
+        });
+    });
 
     app.get('/adminSite', (req, res) => {
         res.render('adminSite', {

@@ -3,6 +3,7 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 var User = require('../models/user');
 var secret = require('../secret/secret');
@@ -116,6 +117,28 @@ passport.use(new FacebookStrategy(secret.facebook,
                 newUser.fullname = profile.displayName;
                 newUser.email = profile._json.email;
                 newUser.tokens.push({ token: token });
+
+                newUser.save((err) => {
+                    return done(null, newUser);
+                });
+            }
+        });
+    }));
+
+passport.use(new GoogleStrategy(secret.google,
+    (req, gtoken, refreshTOken, profile, done) => {
+        User.findOne({ google: profile.id }, (err, user) => {
+            if (err) {
+                return done(err);
+            }
+            if (user) {
+                return done(null, user);
+            } else {
+                var newUser = new User();
+                newUser.google = profile.id;
+                newUser.fullname = profile.displayName;
+                newUser.email = profile._json.email;
+                newUser.gtokens.push({ gtoken: gtoken });
 
                 newUser.save((err) => {
                     return done(null, newUser);
