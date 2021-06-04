@@ -203,8 +203,8 @@ module.exports = (app) => {
 
                 var mailOptions = {
                     to: user.email, //req.body.email
-                    from: `BaiTH1 <${secret.auth.user}>`,
-                    subject: 'BaiTH1 Application Password Reset Token',
+                    from: `AnimeLau <${secret.auth.user}>`,
+                    subject: 'AnimeLau Application Password Reset Token',
                     text: 'You have requested for password reset token. \n\n' +
                         'Please click on the link to complete the process: \n\n' +
                         'http://localhost:3000/reset/' + rand + '\n\n'
